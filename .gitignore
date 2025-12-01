@@ -1,0 +1,39 @@
+# Arduino IDE
+*.hex
+*.elf
+*.bin
+build/
+*.cache
+
+# Arduino IDE 1.x
+*.o
+*.a
+*.d
+*.eep
+*.lss
+*.sym
+*.su
+*.elf
+*.hex
+*.eep
+
+# Arduino IDE 2.x
+.vscode/
+.settings/
+*.ino.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Build artifacts
+*.log
+
