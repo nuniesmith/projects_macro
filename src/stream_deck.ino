@@ -1,5 +1,5 @@
 /*
- * Arduino Stream Deck / Macro Keyboard
+ * Arduino Macro Keyboard
  * 
  * A USB HID macro keyboard and media controller using Arduino Pro Micro.
  * Features: media controls, volume encoder, application launcher buttons.

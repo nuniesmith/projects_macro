@@ -16,7 +16,7 @@ Tutorials, guides, and inspiration from the DIY community for building Arduino-b
   - Pin-to-GND + internal pull-up technique
   - Software debouncing class example
 
-- **[Arduino Stream Deck](https://www.instructables.com/Arduino-Stream-Deck/)** - Instructables
+- **[Arduino Macro Keyboard](https://www.instructables.com/Arduino-Stream-Deck/)** - Instructables
   - Complete build guide with 3D printing files
   - Multiple button layouts
 
@@ -29,14 +29,21 @@ Tutorials, guides, and inspiration from the DIY community for building Arduino-b
 ## Advanced Projects
 
 ### Touchscreen Versions
-- **[DIY Stream Deck with Arduino Nextion](https://www.hackster.io/ElectronicCNCLAB/diy-stream-deck-with-arduino-nextion-96c64f)** - Hackster.io
-  - Advanced touchscreen version
-  - Nextion 3.5" display integration
-  - Upgrade path for adding visual icons
+- **[DIY Stream Deck with Arduino Nextion](https://www.hackster.io/ElectronicCNCLAB/diy-stream-deck-with-arduino-nextion-96c64f)** - Hackster.io (March 2025)
+  - **Most popular 2025 build** - complete KiCad files + 3D models
+  - Nextion 3.5" display integration with GUI examples
+  - Python companion script in comments for real-time feedback
+  - Full upgrade path from basic to professional
+
+- **[DIY Stream Deck Customize Your Buttons](https://www.instructables.com/DIY-Stream-Deck-With-Arduino-Nextion-Customize-You/)** - Instructables
+  - Excellent Nextion Editor walkthrough
+  - Icon creation and upload tutorial
+  - Button animation examples
 
 ### YouTube Tutorials
 - **"DIY Stream Deck with Arduino!"** (March 2025)
   - Nextion/OLED screen integration
+  - Real-time feedback implementation
   - Underlying HID code and wiring identical to simple versions
 
 ## Technical Resources
@@ -48,6 +55,64 @@ Tutorials, guides, and inspiration from the DIY community for building Arduino-b
 ### USB HID
 - [Arduino Keyboard Library Reference](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/)
 - [USB HID Usage Tables](https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf) - Official HID codes
+
+### Upgrade-Specific Resources
+
+#### WS2812B RGB LEDs
+- [FastLED Library Documentation](https://github.com/FastLED/FastLED/wiki/Overview) - Best LED library
+- [Random Nerd Tutorials: WS2812B Guide](https://randomnerdtutorials.com/guide-for-ws2812b-addressable-rgb-led-strip-with-arduino/)
+- [Adafruit NeoPixel Überguide](https://learn.adafruit.com/adafruit-neopixel-uberguide)
+
+#### Real-Time Feedback
+- [Spotipy Documentation](https://spotipy.readthedocs.io/) - Spotify API wrapper
+- [pycaw GitHub](https://github.com/AndreCAndersen/pycaw) - Windows audio control
+- [pySerial Documentation](https://pyserial.readthedocs.io/) - Serial communication
+
+#### Nextion Display
+- [Nextion Instruction Set](https://nextion.tech/instruction-set/) - Command reference
+- [Nextion Editor Download](https://nextion.tech/nextion-editor/) - Free GUI designer
+- [Nextion Arduino Library](https://github.com/itead/ITEADLIB_Arduino_Nextion)
+
+#### Custom PCB Design
+- [KiCad 8 Download](https://www.kicad.org/download/) - Free PCB design software
+- [Getting to Blinky Tutorial](https://www.youtube.com/watch?v=BVhWh3AsXQs) - Phil's Lab (best KiCad intro)
+- [ai03 Keyboard PCB Guide](https://wiki.ai03.com/books/pcb-design/chapter/pcb-guide-part-1---preparations) - Industry standard
+- [KiCad Libraries for MX switches](https://github.com/ai03-2725/MX_Alps_Hybrid)
+- [JLCPCB](https://jlcpcb.com/) - PCB manufacturing ($12 for 5 boards)
+
+#### 3D Printing
+- [Thingiverse Stream Deck Cases](https://www.thingiverse.com/search?q=stream+deck&type=things&sort=popular)
+- [Printables Macropad Cases](https://www.printables.com/search/models?q=macropad)
+- [Super Make Something Cases](https://www.thingiverse.com/thing:4650060) - Most popular
+- [Swillkb Plate Builder](http://builder.swillkb.com/) - Parametric case generator
+- [3D Printing Guide for Keyboards](https://all3dp.com/2/diy-stream-deck-3d-print/)
+
+### Open-Source Project Templates
+
+#### KiCad PCB Files
+- **Hackster Nextion Stream Deck** (2025) - Complete 3×4 layout with hotswap
+- **BDN9 by keeb.io** - Well-documented 3×3 macropad
+- **Corne-ish Macropad** - Highly customizable template
+
+Search GitHub for: "arduino stream deck", "macropad kicad pro micro", "hotswap macropad"
+
+#### Arduino Code Examples
+- [witnessmenow/spotify-api-arduino](https://github.com/witnessmenow/spotify-api-arduino) - Spotify integration
+- [FastLED Examples](https://github.com/FastLED/FastLED/tree/master/examples) - LED effects library
+
+### Community Resources
+
+#### Forums & Discord
+- r/MechanicalKeyboards - Active DIY community
+- r/Arduino - Hardware troubleshooting
+- 40percent.club Discord - Macropad enthusiasts
+- MechKeys Discord - PCB design help
+
+#### YouTube Channels
+- **Super Make Something** - Original DIY stream deck builds
+- **Great Scott** - Arduino project tutorials
+- **Phil's Lab** - PCB design tutorials
+- **Teaching Tech** - 3D printing guides
 
 ### Rotary Encoders
 - [Encoder Library by Paul Stoffregen](https://www.pjrc.com/teensy/td_libs_Encoder.html)

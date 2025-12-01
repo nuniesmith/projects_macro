@@ -1,6 +1,6 @@
 # Bill of Materials (BOM)
 
-Complete component list for the Arduino Stream Deck project.
+Complete component list for the Arduino Macro Keyboard project.
 
 ## Required Components
 
@@ -25,6 +25,38 @@ Complete component list for the Arduino Stream Deck project.
 | WS2812B LED Strip | 1 | Individually addressable RGB LEDs (optional upgrade) | $5–10 |
 | Perfboard/PCB | 1 | For permanent soldered build | $5–20 |
 | Enclosure | 1 | 3D-printed or custom case | $10–30 |
+
+## Upgrade Components
+
+See **[docs/upgrade_roadmap.md](../docs/upgrade_roadmap.md)** for detailed upgrade guides.
+
+### WS2812B RGB LED Upgrade ($5-15)
+| Component | Quantity | Description | Approx. Cost |
+|-----------|----------|-------------|--------------|
+| WS2812B LED strip | 12-30 LEDs | Individually addressable RGB | $5–15 |
+| Resistor | 1× 330Ω | Data line protection | $0.05 |
+| Capacitor | 1× 1000µF 6.3V | Power filtering (optional) | $0.50 |
+
+### Nextion Display Upgrade ($25-60)
+| Component | Size | Description | Approx. Cost |
+|-----------|------|-------------|--------------|
+| Nextion Basic NX4832K035 | 3.5" | 480×320 touchscreen | $25–35 |
+| Nextion Enhanced NX4832K035 | 3.5" | Faster version | $35–45 |
+| Nextion Basic NX8048T050 | 5.0" | 800×480 touchscreen | $45–60 |
+
+### Custom PCB Upgrade ($30-75)
+| Component | Quantity | Description | Approx. Cost |
+|-----------|----------|-------------|--------------|
+| Custom PCB | 5 boards | JLCPCB fabrication | $12 |
+| Hotswap sockets (Kailh) | 12 | MX switch sockets | $1.20 |
+| WS2812B LEDs (SMD 5050) | 12 | Surface-mount RGB | $1.20 |
+| Diodes (1N4148) | 12 | For matrix | $0.25 |
+| Cherry MX switches | 12 | Your choice | $6–18 |
+| Keycaps | 12 | DSA/XDA profile | $12–24 |
+| Heat-set inserts | 4-6 | M3 × 4mm brass | $5 |
+| Screws | 4-6 | M3 × 8mm | $2 |
+
+**Total Upgrade Cost:** $40–$187 (depending on components chosen)
 
 ## Component Details
 

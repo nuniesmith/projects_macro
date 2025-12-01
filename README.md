@@ -1,4 +1,4 @@
-# Arduino Stream Deck / Macro Keyboard
+# Arduino Macro Keyboard
 
 A DIY USB HID macro keyboard and media controller built with Arduino Pro Micro. Control media playback, system volume, and launch applications with physical buttons and a rotary encoder.
 
@@ -45,14 +45,19 @@ See [hardware/BOM.md](hardware/BOM.md) for detailed component list and [hardware
 
 ```
 stream/
-├── src/                    # Arduino source code
-│   └── stream_deck.ino    # Main sketch
-├── hardware/               # Hardware documentation
-│   ├── BOM.md             # Bill of Materials
-│   └── pinout.md          # Pin assignments and wiring
-├── docs/                   # Additional documentation
-│   └── references.md      # Citations and resources
-└── README.md              # This file
+├── src/                         # Arduino source code
+│   └── stream_deck.ino         # Main sketch
+├── examples/                    # Upgrade examples
+│   ├── led_upgrade_example.ino         # WS2812B RGB LEDs
+│   ├── realtime_companion.py           # PC status monitor
+│   └── arduino_with_feedback.ino       # Complete feedback example
+├── hardware/                    # Hardware documentation
+│   ├── BOM.md                  # Bill of Materials
+│   └── pinout.md               # Pin assignments and wiring
+├── docs/                        # Additional documentation
+│   ├── references.md           # Citations and resources
+│   └── upgrade_roadmap.md      # Comprehensive upgrade guide
+└── README.md                   # This file
 ```
 
 ## How It Works
@@ -84,11 +89,20 @@ The encoder provides smooth volume control. CLK and DT pins should connect to in
 
 ## Future Enhancements
 
-- [ ] OLED/Nextion display for visual icons
-- [ ] WS2812B RGB LEDs for color-coded feedback
-- [ ] Custom PCB design
-- [ ] 3D-printed enclosure
-- [ ] Real-time status feedback (e.g., Spotify playing indicator)
+This project is designed to be upgraded incrementally. See **[docs/upgrade_roadmap.md](docs/upgrade_roadmap.md)** for comprehensive upgrade documentation including:
+
+- ✅ **WS2812B RGB LEDs** - Color-coded visual feedback (1 weekend, $5-15)
+- ✅ **Real-time Status** - Spotify/volume/mute indicators via Python companion (1 weekend, free)
+- ✅ **Nextion Display** - Touchscreen GUI with icons (2-3 days, $25-60)
+- ✅ **Custom PCB** - Professional hotswap build with KiCad (1-2 weeks, $30-60)
+- ✅ **3D-Printed Case** - Final enclosure (1 week, $10-30)
+
+**Working Examples:** See `examples/` directory for upgrade code:
+- `led_upgrade_example.ino` - WS2812B RGB LED integration
+- `realtime_companion.py` - Python script for status monitoring
+- `arduino_with_feedback.ino` - Complete example with real-time updates
+
+**Total Upgrade Cost:** $40-$80 for professional stream deck comparable to $150 Elgato
 
 ## References
 

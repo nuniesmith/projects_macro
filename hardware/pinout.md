@@ -1,6 +1,6 @@
 # Pinout and Wiring Diagram
 
-Complete pin assignments and wiring instructions for the Arduino Stream Deck.
+Complete pin assignments and wiring instructions for the Arduino Macro Keyboard.
 
 ## Pin Assignment Table
 
@@ -96,7 +96,34 @@ If using a rotary encoder for volume (recommended), you can free up pins 2 & 3:
 | 10 | Steam |
 | 2, 3 | Available for additional buttons |
 
+## Upgraded Pinout (with WS2812B + Nextion)
+
+After implementing upgrades (see [docs/upgrade_roadmap.md](../docs/upgrade_roadmap.md)):
+
+| Arduino Pin | Function | Connection | Notes |
+|-------------|----------|------------|-------|
+| 0 (RX) | Nextion TX | Nextion display serial | Serial1 |
+| 1 (TX) | Nextion RX | Nextion display serial | Serial1 |
+| 2 | Encoder CLK | Rotary encoder | Interrupt-capable |
+| 3 | Encoder DT | Rotary encoder | Interrupt-capable |
+| 4 | Encoder SW | Rotary encoder button | Mute toggle |
+| 5-8 | Optional buttons | Physical buttons (if keeping) | Can be removed if using Nextion |
+| 9 | WS2812B Data | LED strip data line | Via 330Ω resistor |
+| 10-21 | Spare | Future expansion | 12 pins available |
+
+**Power Connections:**
+- 5V → Nextion VCC, WS2812B 5V, Encoder VCC
+- GND → Common ground for all components
+- RAW → Not used (optional external power input)
+
+**Notes:**
+- Nextion uses Serial1 (pins 0/1), USB serial (`Serial`) remains available for debugging
+- WS2812B supports up to ~30 LEDs on Pro Micro 5V (500mA limit)
+- Still have 12+ pins free for expansion (buttons, sensors, etc.)
+
 ## Troubleshooting
+
+### Basic Hardware
 
 **Button not working:**
 - Check that button is connected to pin and GND (not 5V)
@@ -112,4 +139,27 @@ If using a rotary encoder for volume (recommended), you can free up pins 2 & 3:
 - Ensure CLK and DT are on interrupt-capable pins (0 & 1)
 - Use interrupt-based reading or Encoder library
 - Add proper debouncing in code
+
+### Upgrade-Specific
+
+**WS2812B LEDs not working:**
+- Verify data pin connection (pin 9 in examples)
+- Check FastLED color order: try GRB, RGB, or BRG
+- Test with simple example: `leds[0] = CRGB::Red; FastLED.show();`
+- Ensure 5V and GND are connected to strip
+- Add 330Ω resistor on data line if experiencing glitches
+- If >30 LEDs, use external 5V power supply
+
+**Nextion display blank:**
+- Check serial connection: TX → RX, RX → TX (crossed)
+- Verify baud rate matches (9600 default)
+- Ensure display has valid .tft file uploaded via microSD
+- Test with simple command: `Serial1.print("page 0");` + 3× 0xFF
+
+**Real-time feedback not working:**
+- Verify Python script is running (check Task Manager / Activity Monitor)
+- Check serial port in Python script matches Arduino port
+- Test serial connection: Arduino should print received characters
+- Ensure companion script has valid Spotify API credentials
+- Check USB cable supports data (some are charge-only)
 
